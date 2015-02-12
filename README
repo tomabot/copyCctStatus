@@ -1,0 +1,8 @@
+
+copyCctStatus.rb is a ruby script for gathering status information from the
+    Cell-CT graphics server to the projects directory on lancer
+
+cctConfig is a json file that defines key/value pairs for Cell-CT instrument
+    names and corresponding IP addresses
+
+crontab_list_20150210 is the crontab output for running copyCctStatus.rb
