@@ -46,6 +46,9 @@ def CopyRtmLogs(cctname, cctip, timestamp)
 		end
 	rescue Exception => e
 		puts "copyRtmLogs( #{cctname} ): #{e.message}"
+	ensure
+        puts "ssh cctuser@#{cctip} \"rm -rf /home/cctuser/#{srcfile} \""
+             `ssh cctuser@#{cctip} \"rm -rf /home/cctuser/#{srcfile} \"`
 	end
 end	
 
