@@ -5,4 +5,5 @@ copyCctStatus.rb is a ruby script for gathering status information from the
 cctConfig is a json file that defines key/value pairs for Cell-CT instrument
     names and corresponding IP addresses
 
-crontab_list_20150210 is the crontab output for running copyCctStatus.rb
+crontab_list_20150828 is the crontab output for running copyCctStatus.rb
+

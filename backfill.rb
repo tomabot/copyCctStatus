@@ -295,7 +295,7 @@ end
 debug = "false"
 
 if ARGV[0] == nil
-    configFile = "/home/tomabot/local/copyCctStatus/cct_config"
+    configFile = "/home/vguser/local/src/copyCctStatus/cct_config"
 else
     configFile = ARGV[0]
 end
@@ -303,6 +303,90 @@ end
 cctConfig = File.read( "#{configFile}" )
 cctJson = JSON.parse( cctConfig )
 cctJson.each do |cctname, cctip|
+    # set timestamp to yesterday (rightnow - 24hrs)
+    timestamp = Time.now() - ( 86400.0 * 6 )
+
+    CopyCalImages(cctname, cctip, timestamp, debug)
+    CopyCameractlLogs(cctname, cctip, timestamp, debug)
+    CopyHpiLogs(cctname, cctip, timestamp, debug)
+    CopyImgprocessdLogs(cctname, cctip, timestamp, debug)
+    CopyRtmLogs(cctname, cctip, timestamp, debug)
+    CopySpanLogs(cctname, cctip, timestamp, debug)
+    CopyTemperatureMon(cctname, cctip, timestamp, debug)
+    CopyUcmLogs(cctname, cctip, timestamp, debug)
+    CopyUcmStatus(cctname, cctip, timestamp, debug)
+
+    puts " "
+    # set timestamp to yesterday (rightnow - 24hrs)
+    timestamp = Time.now() - ( 86400.0 * 5 )
+
+    CopyCalImages(cctname, cctip, timestamp, debug)
+    CopyCameractlLogs(cctname, cctip, timestamp, debug)
+    CopyHpiLogs(cctname, cctip, timestamp, debug)
+    CopyImgprocessdLogs(cctname, cctip, timestamp, debug)
+    CopyRtmLogs(cctname, cctip, timestamp, debug)
+    CopySpanLogs(cctname, cctip, timestamp, debug)
+    CopyTemperatureMon(cctname, cctip, timestamp, debug)
+    CopyUcmLogs(cctname, cctip, timestamp, debug)
+    CopyUcmStatus(cctname, cctip, timestamp, debug)
+
+    puts " "
+    # set timestamp to yesterday (rightnow - 24hrs)
+    timestamp = Time.now() - ( 86400.0 * 4 )
+
+    CopyCalImages(cctname, cctip, timestamp, debug)
+    CopyCameractlLogs(cctname, cctip, timestamp, debug)
+    CopyHpiLogs(cctname, cctip, timestamp, debug)
+    CopyImgprocessdLogs(cctname, cctip, timestamp, debug)
+    CopyRtmLogs(cctname, cctip, timestamp, debug)
+    CopySpanLogs(cctname, cctip, timestamp, debug)
+    CopyTemperatureMon(cctname, cctip, timestamp, debug)
+    CopyUcmLogs(cctname, cctip, timestamp, debug)
+    CopyUcmStatus(cctname, cctip, timestamp, debug)
+
+    puts " "
+    # set timestamp to yesterday (rightnow - 24hrs)
+    timestamp = Time.now() - ( 86400.0 * 3 )
+
+    CopyCalImages(cctname, cctip, timestamp, debug)
+    CopyCameractlLogs(cctname, cctip, timestamp, debug)
+    CopyHpiLogs(cctname, cctip, timestamp, debug)
+    CopyImgprocessdLogs(cctname, cctip, timestamp, debug)
+    CopyRtmLogs(cctname, cctip, timestamp, debug)
+    CopySpanLogs(cctname, cctip, timestamp, debug)
+    CopyTemperatureMon(cctname, cctip, timestamp, debug)
+    CopyUcmLogs(cctname, cctip, timestamp, debug)
+    CopyUcmStatus(cctname, cctip, timestamp, debug)
+
+    puts " "
+    # set timestamp to yesterday (rightnow - 24hrs)
+    timestamp = Time.now() - ( 86400.0 * 2 )
+
+    CopyCalImages(cctname, cctip, timestamp, debug)
+    CopyCameractlLogs(cctname, cctip, timestamp, debug)
+    CopyHpiLogs(cctname, cctip, timestamp, debug)
+    CopyImgprocessdLogs(cctname, cctip, timestamp, debug)
+    CopyRtmLogs(cctname, cctip, timestamp, debug)
+    CopySpanLogs(cctname, cctip, timestamp, debug)
+    CopyTemperatureMon(cctname, cctip, timestamp, debug)
+    CopyUcmLogs(cctname, cctip, timestamp, debug)
+    CopyUcmStatus(cctname, cctip, timestamp, debug)
+
+    puts " "
+    # set timestamp to yesterday (rightnow - 24hrs)
+    timestamp = Time.now() - ( 86400.0 * 1 )
+
+    CopyCalImages(cctname, cctip, timestamp, debug)
+    CopyCameractlLogs(cctname, cctip, timestamp, debug)
+    CopyHpiLogs(cctname, cctip, timestamp, debug)
+    CopyImgprocessdLogs(cctname, cctip, timestamp, debug)
+    CopyRtmLogs(cctname, cctip, timestamp, debug)
+    CopySpanLogs(cctname, cctip, timestamp, debug)
+    CopyTemperatureMon(cctname, cctip, timestamp, debug)
+    CopyUcmLogs(cctname, cctip, timestamp, debug)
+    CopyUcmStatus(cctname, cctip, timestamp, debug)
+
+    puts " "
     # set timestamp to yesterday (rightnow - 24hrs)
     timestamp = Time.now() - 86400.0
 

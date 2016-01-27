@@ -295,7 +295,7 @@ end
 debug = "false"
 
 if ARGV[0] == nil
-    configFile = "/home/tomabot/local/copyCctStatus/cct_config"
+    configFile = "/home/vguser/local/src/copyCctStatus/cct_config"
 else
     configFile = ARGV[0]
 end
@@ -303,18 +303,16 @@ end
 cctConfig = File.read( "#{configFile}" )
 cctJson = JSON.parse( cctConfig )
 cctJson.each do |cctname, cctip|
-    # set timestamp to yesterday (rightnow - 24hrs)
-    timestamp = Time.now() - 86400.0
 
-    CopyCalImages(cctname, cctip, timestamp, debug)
-    CopyCameractlLogs(cctname, cctip, timestamp, debug)
-    CopyHpiLogs(cctname, cctip, timestamp, debug)
-    CopyImgprocessdLogs(cctname, cctip, timestamp, debug)
-    CopyRtmLogs(cctname, cctip, timestamp, debug)
-    CopySpanLogs(cctname, cctip, timestamp, debug)
-    CopyTemperatureMon(cctname, cctip, timestamp, debug)
-    CopyUcmLogs(cctname, cctip, timestamp, debug)
-    CopyUcmStatus(cctname, cctip, timestamp, debug)
+    CopyCalImages(cctname, cctip, Time.now(), debug)
+    CopyCameractlLogs(cctname, cctip, Time.now(), debug)
+    CopyHpiLogs(cctname, cctip, Time.now(), debug)
+    CopyImgprocessdLogs(cctname, cctip, Time.now(), debug)
+    CopyRtmLogs(cctname, cctip, Time.now(), debug)
+    CopySpanLogs(cctname, cctip, Time.now(), debug)
+    CopyTemperatureMon(cctname, cctip, Time.now(), debug)
+    CopyUcmLogs(cctname, cctip, Time.now(), debug)
+    CopyUcmStatus(cctname, cctip, Time.now(), debug)
 
     puts " "
 end
