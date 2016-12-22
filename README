@@ -7,3 +7,14 @@ cctConfig is a json file that defines key/value pairs for Cell-CT instrument
 
 crontab_list_20150828 is the crontab output for running copyCctStatus.rb
 
+Dec 21, 2016
+	Removed the ucm_logs copy code from copyCctStatus.rb and moved it
+	into the ruby script file getLatestUcmLogs.rb. Before I did this
+	the function would copy all the log files generated the day before
+	over to lancer. New the version of this function copies all the logs
+	generated so far today that have not been copied over.
+
+
+	The configuration files for the individual cct's were named cctXXX_config,
+	where XXX was the serial number for the cct. The configuration files have
+	been renamed cctXXX (without the _config suffix)

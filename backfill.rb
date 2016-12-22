@@ -304,7 +304,46 @@ cctConfig = File.read( "#{configFile}" )
 cctJson = JSON.parse( cctConfig )
 cctJson.each do |cctname, cctip|
     # set timestamp to yesterday (rightnow - 24hrs)
-    timestamp = Time.now() - ( 86400.0 * 6 )
+    timestamp = Time.now() - ( 86400.0 * 26 )
+
+    CopyCalImages(cctname, cctip, timestamp, debug)
+    CopyCameractlLogs(cctname, cctip, timestamp, debug)
+    CopyHpiLogs(cctname, cctip, timestamp, debug)
+    CopyImgprocessdLogs(cctname, cctip, timestamp, debug)
+    CopyRtmLogs(cctname, cctip, timestamp, debug)
+    CopySpanLogs(cctname, cctip, timestamp, debug)
+    CopyTemperatureMon(cctname, cctip, timestamp, debug)
+    CopyUcmLogs(cctname, cctip, timestamp, debug)
+    CopyUcmStatus(cctname, cctip, timestamp, debug)
+
+    # set timestamp to yesterday (rightnow - 24hrs)
+    timestamp = Time.now() - ( 86400.0 * 25 )
+
+    CopyCalImages(cctname, cctip, timestamp, debug)
+    CopyCameractlLogs(cctname, cctip, timestamp, debug)
+    CopyHpiLogs(cctname, cctip, timestamp, debug)
+    CopyImgprocessdLogs(cctname, cctip, timestamp, debug)
+    CopyRtmLogs(cctname, cctip, timestamp, debug)
+    CopySpanLogs(cctname, cctip, timestamp, debug)
+    CopyTemperatureMon(cctname, cctip, timestamp, debug)
+    CopyUcmLogs(cctname, cctip, timestamp, debug)
+    CopyUcmStatus(cctname, cctip, timestamp, debug)
+
+    # set timestamp to yesterday (rightnow - 24hrs)
+    timestamp = Time.now() - ( 86400.0 * 24 )
+
+    CopyCalImages(cctname, cctip, timestamp, debug)
+    CopyCameractlLogs(cctname, cctip, timestamp, debug)
+    CopyHpiLogs(cctname, cctip, timestamp, debug)
+    CopyImgprocessdLogs(cctname, cctip, timestamp, debug)
+    CopyRtmLogs(cctname, cctip, timestamp, debug)
+    CopySpanLogs(cctname, cctip, timestamp, debug)
+    CopyTemperatureMon(cctname, cctip, timestamp, debug)
+    CopyUcmLogs(cctname, cctip, timestamp, debug)
+    CopyUcmStatus(cctname, cctip, timestamp, debug)
+
+    # set timestamp to yesterday (rightnow - 24hrs)
+    timestamp = Time.now() - ( 86400.0 * 23 )
 
     CopyCalImages(cctname, cctip, timestamp, debug)
     CopyCameractlLogs(cctname, cctip, timestamp, debug)
@@ -318,7 +357,7 @@ cctJson.each do |cctname, cctip|
 
     puts " "
     # set timestamp to yesterday (rightnow - 24hrs)
-    timestamp = Time.now() - ( 86400.0 * 5 )
+    timestamp = Time.now() - ( 86400.0 * 22 )
 
     CopyCalImages(cctname, cctip, timestamp, debug)
     CopyCameractlLogs(cctname, cctip, timestamp, debug)
@@ -332,7 +371,7 @@ cctJson.each do |cctname, cctip|
 
     puts " "
     # set timestamp to yesterday (rightnow - 24hrs)
-    timestamp = Time.now() - ( 86400.0 * 4 )
+    timestamp = Time.now() - ( 86400.0 * 21 )
 
     CopyCalImages(cctname, cctip, timestamp, debug)
     CopyCameractlLogs(cctname, cctip, timestamp, debug)
@@ -346,7 +385,7 @@ cctJson.each do |cctname, cctip|
 
     puts " "
     # set timestamp to yesterday (rightnow - 24hrs)
-    timestamp = Time.now() - ( 86400.0 * 3 )
+    timestamp = Time.now() - ( 86400.0 * 20 )
 
     CopyCalImages(cctname, cctip, timestamp, debug)
     CopyCameractlLogs(cctname, cctip, timestamp, debug)
@@ -360,7 +399,7 @@ cctJson.each do |cctname, cctip|
 
     puts " "
     # set timestamp to yesterday (rightnow - 24hrs)
-    timestamp = Time.now() - ( 86400.0 * 2 )
+    timestamp = Time.now() - ( 86400.0 * 19 )
 
     CopyCalImages(cctname, cctip, timestamp, debug)
     CopyCameractlLogs(cctname, cctip, timestamp, debug)
@@ -374,7 +413,7 @@ cctJson.each do |cctname, cctip|
 
     puts " "
     # set timestamp to yesterday (rightnow - 24hrs)
-    timestamp = Time.now() - ( 86400.0 * 1 )
+    timestamp = Time.now() - ( 86400.0 * 18 )
 
     CopyCalImages(cctname, cctip, timestamp, debug)
     CopyCameractlLogs(cctname, cctip, timestamp, debug)
@@ -388,7 +427,7 @@ cctJson.each do |cctname, cctip|
 
     puts " "
     # set timestamp to yesterday (rightnow - 24hrs)
-    timestamp = Time.now() - 86400.0
+    timestamp = Time.now() - ( 86400.0 * 17 )
 
     CopyCalImages(cctname, cctip, timestamp, debug)
     CopyCameractlLogs(cctname, cctip, timestamp, debug)

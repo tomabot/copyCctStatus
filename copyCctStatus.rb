@@ -1,4 +1,4 @@
-#!/usr/local/env ruby
+#!/usr/bin/env ruby
 require 'json'
 
 #
@@ -304,6 +304,7 @@ cctConfig = File.read( "#{configFile}" )
 cctJson = JSON.parse( cctConfig )
 cctJson.each do |cctname, cctip|
     # set timestamp to yesterday (rightnow - 24hrs)
+    # gets logs from previous day to midnight
     timestamp = Time.now() - 86400.0
 
     CopyCalImages(cctname, cctip, timestamp, debug)
@@ -313,7 +314,7 @@ cctJson.each do |cctname, cctip|
     CopyRtmLogs(cctname, cctip, timestamp, debug)
     CopySpanLogs(cctname, cctip, timestamp, debug)
     CopyTemperatureMon(cctname, cctip, timestamp, debug)
-    CopyUcmLogs(cctname, cctip, timestamp, debug)
+    #CopyUcmLogs(cctname, cctip, timestamp, debug)
     CopyUcmStatus(cctname, cctip, timestamp, debug)
 
     puts " "
